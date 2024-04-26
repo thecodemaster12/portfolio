@@ -30,9 +30,9 @@ a {
 .section {
     height: 100vh;
     padding-top: 10vh;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 /* ==========================================================================
    Base styles
@@ -73,6 +73,24 @@ a {
 /* HeroSection */
 .hero-section  {
     background-color: tomato;
+}
+.hero-grid {
+    height: inherit;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+.hero-content {
+    padding: 0px 10%;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+}
+.hero-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
 }
 /* HeroSection */
 
