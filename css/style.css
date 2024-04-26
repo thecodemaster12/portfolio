@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+:root {
+    --font-base: 'Satoshi', sans-serif;
+    --font-chilax: 'Chillax', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--font-base);
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.w-80 {
+    width: 80%;
+    margin: 0 auto;
+}
+.section {
+    height: 100vh;
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+/* Navbar Section */
+.navbar-section {
+    background-color: #000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.logo h1{
+    font-size: 35px;
+    color: #fff;
+    font-family: var(--font-chilax);
+    text-transform: capitalize;
+}
+.navbar {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+}
+.nav-links li a {
+    font-size: 25px;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 20px 30px;
+}
+/* Navbar Section */
+
+/* HeroSection */
+.hero-section  {
+    background-color: tomato;
+}
+/* HeroSection */
+
+/* Project Section */
+.project-section {
+    background-color: lightgreen;
+}
+/* Project Section */
+
+/* Skills Section */
+.skills-section {
+    background-color: aqua;
+}
+/* Skills Section */
+
+/* Contacts Section */
+.contact-section {
+    background-color: crimson;
+}
+/* Contacts Section */
