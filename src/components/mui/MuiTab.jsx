@@ -5,6 +5,11 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import MuiCard from './MuiCard';
 
+import ReactProject from '../../assets/js/react';
+import PsdProjects from '../../assets/js/pst-to-html';
+import PhpProject from '../../assets/js/php';
+import LaravelProject from '../../assets/js/laravel';
+
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -42,7 +47,7 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '60%' }}>
+    <Box sx={{ width: '80%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered indicatorColor='secondary' textColor='secondary'>
           <Tab label="PSD to HTML" {...a11yProps(0)} />
@@ -52,20 +57,32 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <div className="flex gap-2">
-          <MuiCard title="HTML" />
-          <MuiCard title="HTML" />
-          <MuiCard title="HTML" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {PsdProjects.map((project) => (
+            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image} link={project.link} />
+          ))}
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        Item Two
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {ReactProject.map((project) => (
+            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image} link={project.link} />
+          ))}
+        </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        Item Three
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {PhpProject.map((project) => (
+            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image} link={project.link} />
+          ))}
+        </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
-        Item dsfdsf
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {LaravelProject.map((project) => (
+            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image} link={project.link} />
+          ))}
+        </div>
       </CustomTabPanel>
     </Box>
   );

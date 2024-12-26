@@ -3,8 +3,10 @@ import React from 'react'
 const Navbar = () => {
   return (
     <nav className='flex justify-between items-center px-3 py-6 top-0 sticky bg-transparent backdrop-blur-lg rounded-md shadow-lg z-50'>
-        <div className="text-2xl">
-            <h2>Logo</h2>
+        <div className="">
+            <a href="#hero">
+                <h2 className='text-2xl text-primary font-pally font-bold tracking-wider'>Shihab</h2>
+            </a>
         </div>
 
         <ul className='hidden md:flex gap-4 '>
