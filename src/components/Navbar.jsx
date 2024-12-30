@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '@mui/material/Button';
 
 const Navbar = () => {
   return (
@@ -18,7 +19,9 @@ const Navbar = () => {
         </ul>
 
         <div className="">
-            <button>Button</button>
+            <a href="https://drive.google.com/file/d/1hBFS6GCW1Scz8FX65ibFRq1Em4Y_zkxg/view?usp=sharing" target="_blank" rel="noreferrer">
+                <Button variant="contained" className='bg-primary text-white'> <i className="fa fa-eye"></i> &nbsp; View Resume</Button>
+            </a>
         </div>
 
         {/* Mobile Navigation */}
