@@ -11,3 +11,12 @@
         @apply font-satoshi;
     }
 }
+
+@layer components {
+    .underline-animation{
+        @apply relative;
+    }
+    .underline-animation::after{
+        @apply absolute content-[''] w-full h-1 bg-primary left-0 -bottom-2 scale-x-0 hover:scale-x-100 transition-transform duration-300 origin-bottom-right hover:origin-bottom-left;
+    }
+}
