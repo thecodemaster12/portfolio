@@ -31,11 +31,11 @@ export default {
         wave: 'wave 2s ease-in-out infinite',
         hero_banner: 'hero_banner 10s ease-in-out infinite',
       },
-    },
-    colors: {
-      'primary': '#6C63FF',
-      'secondary': '#3F3D56',
-      'dark': '#262534',
+      colors: {
+        'primary': '#6C63FF',
+        'secondary': '#3F3D56',
+        'dark': '#262534',
+      },
     },
   },
   plugins: [],
