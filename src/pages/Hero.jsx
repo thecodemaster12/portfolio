@@ -25,8 +25,8 @@ const Hero = () => {
   
   return (
     <>
-      <section id="hero">
-        <div className="min-h-screen grid md:grid-cols-2 gap-16 md:gap-0 lg:gap-4 place-content-center place-items-center p-6">
+      <section>
+        <div className="min-h-screen grid md:grid-cols-2 gap-16 md:gap-0 lg:gap-4 place-content-center place-items-center p-6 overflow-x-hidden">
 
         <motion.div
                 className="text-4xl font-bold"
