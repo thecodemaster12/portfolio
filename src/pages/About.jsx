@@ -31,7 +31,7 @@ const About = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-6xl text-secondary font-pally">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl text-secondary font-pally">
             About Me <span className="inline-block">🧑‍💻</span>
           </h2>
         </motion.div>
@@ -54,7 +54,7 @@ const About = () => {
 
         {/* Right Section - Details */}
         <motion.div
-          className=""
+          className="hidden"
           initial={{ opacity: 0, x: 100 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 1 }}
