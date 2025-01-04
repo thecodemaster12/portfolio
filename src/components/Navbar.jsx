@@ -1,9 +1,11 @@
 import React from 'react'
 import Button from '@mui/material/Button';
+import MuiMobileMenu from './mui/MuiMobileMenu';
+
 
 const Navbar = () => {
   return (
-    <nav className='flex justify-between items-center px-3 py-6 top-0 sticky bg-transparent backdrop-blur-lg rounded-md shadow-lg z-50'>
+    <nav className='flex justify-between items-center p-4 top-0 sticky bg-transparent backdrop-blur-lg rounded-md shadow-lg z-50'>
         <div className="">
             <a href="#top">
                 <h2 className='text-4xl text-primary font-pally font-bold tracking-wider'>Shihab</h2>
@@ -19,7 +21,7 @@ const Navbar = () => {
             
         </ul>
 
-        <div className="">
+        <div className="hidden md:block">
             <a href="https://drive.google.com/file/d/1hBFS6GCW1Scz8FX65ibFRq1Em4Y_zkxg/view?usp=sharing" target="_blank" rel="noreferrer">
                 <Button variant="contained" className='bg-primary text-white'> <i className="fa fa-eye"></i> &nbsp; View Resume</Button>
             </a>
@@ -27,7 +29,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div className="md:hidden block">
-            Mobile Menu
+            <MuiMobileMenu />
         </div>
     </nav>
   )

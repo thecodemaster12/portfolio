@@ -19,7 +19,7 @@ const About = () => {
   return (
     <section id="about" ref={ref} className="bg-gray-100">
       <motion.div
-        className="min-h-screen grid place-items-center place-content-center gap-6 grid-cols-2 container mx-auto px-8"
+        className="min-h-screen grid place-items-center place-content-center gap-6 grid-cols-2 container mx-auto px-8 overflow-hidden"
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 1 }}
