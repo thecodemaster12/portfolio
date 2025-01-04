@@ -7,10 +7,6 @@ import { FaTelegramPlane } from "react-icons/fa";
 const Contact = () => {
   const form = useRef();
 
-  /**
-   * Handles the email form submission
-   * @param {Event} e the form submission event
-   */
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -57,7 +53,7 @@ const Contact = () => {
       id="contact"
       className="min-h-screen border grid grid-cols-1 md:grid-cols-2 place-content-center place-items-center p-4 gap-2 relative"
     >
-      <div className="col-span-2 mb-8 text-center">
+      <div className="col-span-2 mb-4 md:mb-8 text-center">
         <h2 className="text-3xl text-secondary font-pally">
           Contact Me <span className="inline-block">✉️</span>
         </h2>
@@ -65,12 +61,12 @@ const Contact = () => {
 
       {/* Form */}
       <div className="bg-gray-100 shadow-md border border-gray-200 p-6 rounded-lg col-span-2 w-full md:col-span-1">
-        <form ref={form} onSubmit={sendEmail} className="space-y-6">
+        <form ref={form} onSubmit={sendEmail} className="space-y-4 md:space-y-6">
           {/* Name Field */}
           <div>
             <label
               htmlFor="user_name"
-              className="block text-lg font-medium text-gray-700"
+              className="block text-base md:text-lg font-medium text-gray-700"
             >
               Name
             </label>
@@ -87,7 +83,7 @@ const Contact = () => {
           <div>
             <label
               htmlFor="user_email"
-              className="block text-lg font-medium text-gray-700"
+              className="block text-base md:text-lg font-medium text-gray-700"
             >
               Email
             </label>
@@ -104,7 +100,7 @@ const Contact = () => {
           <div>
             <label
               htmlFor="subject"
-              className="block text-lg font-medium text-gray-700"
+              className="block text-base md:text-lg font-medium text-gray-700"
             >
               Subject
             </label>
@@ -121,7 +117,7 @@ const Contact = () => {
           <div>
             <label
               htmlFor="message"
-              className="block text-lg font-medium text-gray-700"
+              className="block text-base md:text-lg font-medium text-gray-700"
             >
               Message
             </label>
