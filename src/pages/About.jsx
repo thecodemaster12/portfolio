@@ -17,9 +17,9 @@ const About = () => {
   };
 
   return (
-    <section id="about" ref={ref} className="bg-gray-100">
+    <section id="about" ref={ref} className="">
       <motion.div
-        className="border border-red-700 min-h-screen grid place-items-center place-content-center gap-6 grid-cols-1 md:grid-cols-2 px-8 overflow-hidden"
+        className="min-h-screen grid place-items-center place-content-center gap-6 grid-cols-1 md:grid-cols-2 overflow-hidden"
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 1 }}
@@ -52,9 +52,9 @@ const About = () => {
           />
         </motion.div>
 
-        {/* Right Section - Details */}
+        {/* Right Section - Details - For Larger Device */}
         <motion.div
-          className="hidden"
+          className="hidden md:block"
           initial={{ opacity: 0, x: 100 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 1 }}
@@ -69,7 +69,7 @@ const About = () => {
             <h4 className="text-2xl text-primary font-roboto mb-2">
               👋 Hi, I’m Saifur Rahman Shihab!
             </h4>
-            <p className="text-justify text-secondary pl-12">
+            <p className="text-justify text-secondary ">
               A motivated Junior Web Developer with hands-on experience in PHP,
               Laravel, and modern frontend technologies. I specialize in
               crafting responsive, user-friendly web applications and have a
@@ -88,7 +88,7 @@ const About = () => {
             <h4 className="text-2xl text-primary font-roboto mb-2">
               ✨ What Drives Me
             </h4>
-            <p className="text-justify text-secondary pl-12">
+            <p className="text-justify text-secondary ">
               I’m passionate about creating innovative digital experiences and
               continuously learning new technologies to stay ahead in the
               ever-evolving tech landscape.
@@ -113,7 +113,7 @@ const About = () => {
               ].map((item, index) => (
                 <motion.li
                   key={index}
-                  className="pl-12 mb-2"
+                  className=" mb-2"
                   custom={index}
                   variants={listItemVariants}
                   initial="hidden"
@@ -124,6 +124,14 @@ const About = () => {
               ))}
             </ul>
           </motion.div>
+        </motion.div>
+
+        {/* Right Section - Details - For Smaller Device */}
+        <motion.div
+        className="block md:hidden"
+        >
+          <p>Hey! I’m Saifur Rahman Shihab, a Frontend Developer with a knack for creating clean, responsive, and user-friendly websites. Whether it’s working with Laravel, styling with Tailwind, or solving tricky design challenges, I’m always up for the task. Outside of work, I love learning about new tech and experimenting with fun projects. Let’s connect and make the web a better place!</p>
+
         </motion.div>
       </motion.div>
     </section>

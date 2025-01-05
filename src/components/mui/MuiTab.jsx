@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import MuiCard from './MuiCard';
 
 import ReactProject from '../../assets/js/react';
-import PsdProjects from '../../assets/js/pst-to-html';
+import PsdProjects from '../../assets/js/psd-to-html';
 import PhpProject from '../../assets/js/php';
 import LaravelProject from '../../assets/js/laravel';
 
@@ -49,7 +49,13 @@ export default function BasicTabs() {
   return (
     <Box sx={{ width: '80%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered indicatorColor='secondary' textColor='secondary'>
+        <Tabs value={value} onChange={handleChange}
+        variant="scrollable"
+        centered 
+        // scrollButtons
+        allowScrollButtonsMobile
+        aria-label="basic tabs example" 
+        indicatorColor='secondary' textColor='secondary'>
           <Tab label="PSD to HTML" {...a11yProps(0)} />
           <Tab label="React" {...a11yProps(1)} />
           <Tab label="PHP" {...a11yProps(2)} />
