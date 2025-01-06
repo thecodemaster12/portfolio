@@ -51,7 +51,6 @@ export default function BasicTabs() {
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange}
         variant="scrollable"
-        centered 
         // scrollButtons
         allowScrollButtonsMobile
         aria-label="basic tabs example" 
@@ -65,28 +64,28 @@ export default function BasicTabs() {
       <CustomTabPanel value={value} index={0}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {PsdProjects.map((project) => (
-            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image} link={project.link} />
+            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image} link={project.link}  github={project.github}/>
           ))}
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {ReactProject.map((project) => (
-            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image} link={project.link} />
+            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image} link={project.link} github={project.github} />
           ))}
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {PhpProject.map((project) => (
-            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image} link={project.link} />
+            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image}/>
           ))}
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {LaravelProject.map((project) => (
-            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image} link={project.link} />
+            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image}/>
           ))}
         </div>
       </CustomTabPanel>

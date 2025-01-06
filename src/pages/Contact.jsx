@@ -157,10 +157,13 @@ const Contact = () => {
       </div>
 
       {/* Footer */}
-      <footer className="absolute bottom-0 w-full py-2 bg-secondary">
-        <p className="text-center text-sm md:text-base text-white">
-          &copy; {new Date().getFullYear()} Saifur Rahman Shihab. All rights reserved.
-        </p>
+      <footer className="absolute bottom-0 w-full py-2 bg-secondary flex justify-between px-2">
+        <div className="text-white text-sm md:text-base">
+          <i>Copyright &copy; {new Date().getFullYear()} </i>
+        </div>
+        <div className="text-white text-sm md:text-base">
+          <i>Made with ❤️ by Shihab</i>
+        </div>
       </footer>
       <ToastContainer />
     </section>

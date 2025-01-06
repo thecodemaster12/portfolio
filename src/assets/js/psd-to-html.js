@@ -6,23 +6,26 @@ const PsdProjects = [
     {
         id: 1,
         title: 'PSD Project 1',
-        details: 'This comprehensive wiki catalogs every character from the wacky animated series.',
+        details: 'This is a responsive business portfolio website created from a PSD design file.',
         image: PsdProjectImage1,
-        link: 'https://example.com/project1'
+        link: 'https://thecodemaster12.github.io/PSD-to-HTML-1/',
+        github: 'https://github.com/thecodemaster12/PSD-to-HTML-1'
     },
     {
         id: 2,
         title: 'PSD Project 2',
-        details: 'This interactive tool helps you estimate mortgage costs and plan your homeownership journey.',
+        details: 'This is a responsive business portfolio website created from a PSD design file.',
         image: PsdProjectImage2,
-        link: 'https://example.com/project1'
+        link: 'https://thecodemaster12.github.io/PSD-to-HTML-2/',
+        github: 'https://github.com/thecodemaster12/PSD-to-HTML-2'
     },
     {
         id: 3,
         title: 'PSD Project 3',
-        details: 'This user-friendly Ramadan calendar keeps you informed throughout the holy month.',
+        details: 'This is a responsive business portfolio website created from a PSD design file.',
         image: PsdProjectImage3,
-        link: 'https://example.com/project1'
+        link: 'https://thecodemaster12.github.io/PSD-to-HTML-3/',
+        github: 'https://github.com/thecodemaster12/PSD-to-HTML-3'
     },
 
 ];

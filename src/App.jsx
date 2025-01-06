@@ -14,13 +14,11 @@ function App() {
         <div className="container mx-auto">
           <div id="top" className=""></div>
           <Navbar />
-          {/* <Hero /> */}
-          {/* <About /> */}
-          <div className="min-h-screen bg-red-600"></div>
-          <Ab />
-          {/* <Skills />
+          <Hero />
+          <About />
+          <Skills />
           <Projects />
-          <Contact /> */}
+          <Contact />
         </div>
       </div>
     </>

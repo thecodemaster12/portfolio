@@ -40,6 +40,17 @@ const Hero = () => {
                 <h4 className='text-4xl md:text-6xl xl:text-8xl font-bold text-primary font-satoshi mt-3'>Saifur Ramhan Shihab</h4>
                 <h4 className='text-2xl md:text-4xl xl:text-5xl text-secondary font-roboto mt-3'>I'm a Web Developer</h4>
                 <p className='text-secondary mt-4 text-sm md:text-lg xl:text-xl'>Curious and motivated developer passionate about the world of web development.</p>
+                <div className=" mt-2 flex gap-2 justify-center items-center">
+                  <a href="https://www.facebook.com/saifurrahman.shihab.5/" target='_blank' className='p-2 rounded-md text-sm bg-dark'>
+                    <i className='fa fa-facebook text-xl md:text-4xl xl:text-5xl text-white'></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/saifur-rahman-shihab/" target='_blank' className='p-2 rounded-md text-sm bg-dark'>
+                    <i className='fa fa-linkedin text-xl md:text-4xl xl:text-5xl text-white'></i>
+                  </a>
+                  <a href="https://github.com/thecodemaster12" target='_blank' className='p-2 rounded-md text-sm bg-dark'>
+                    <i className='fa fa-github text-xl md:text-4xl xl:text-5xl text-white'></i>
+                  </a>
+                </div>
             </div>
             </motion.div>
 

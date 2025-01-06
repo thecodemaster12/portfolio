@@ -4,7 +4,7 @@ const PhpProjects = [
     {
         id: 1,
         title: 'Org Post',
-        details: '',
+        details: 'A web-based platform developed using PHP, allowing admins to manage organizations, users, and posts securely and efficiently.',
         image: PhpProjectImage1,
         link: 'https://example.com/project1'
     },

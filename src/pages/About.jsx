@@ -4,29 +4,31 @@ import ProfilePic from "../assets/images/profile-pic.png";
 
 const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-10% 0px -40% 0px" }); // Trigger animation at 25% visibility
+  const isInView = useInView(ref, { once: true, margin: "-10% 0px -40% 0px" });
 
-  // Variants for staggered animation of list items
-  const listItemVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: (i) => ({
-      opacity: 1,
-      x: 0,
-      transition: { delay: i * 0.2, duration: 0.5 },
-    }),
+  // Variants for the image animation
+  const imageVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
+
+  // Variants for the details animation (after image animation)
+  const detailsVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 1 } }, // Delay ensures it starts after the image
   };
 
   return (
     <section id="about" ref={ref} className="">
       <motion.div
-        className="min-h-screen grid place-items-center place-content-center gap-6 grid-cols-1 md:grid-cols-2 overflow-hidden"
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 1 }}
+        className="min-h-screen grid place-items-center place-content-center gap-6 grid-cols-1 md:grid-cols-2 p-6"
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
       >
         {/* Heading */}
         <motion.div
-          className="col-span-2 mb-8 text-center"
+          className="col-span-1 md:col-span-2 mb-8 text-center"
           initial={{ opacity: 0, y: -50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -39,9 +41,7 @@ const About = () => {
         {/* Left Section - Profile Image */}
         <motion.div
           className=""
-          initial={{ opacity: 0, x: -100 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 1 }}
+          variants={imageVariants} // Apply image animation variants
         >
           <img
             className="rounded-md shadow-lg"
@@ -52,14 +52,12 @@ const About = () => {
           />
         </motion.div>
 
-        {/* Right Section - Details - For Larger Device */}
+        {/* Right Section - Details */}
         <motion.div
-          className="hidden md:block"
-          initial={{ opacity: 0, x: 100 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 1 }}
+          className="mt-6"
+          variants={detailsVariants} // Apply details animation variants
         >
-          {/* Introduction */}
+          {/* About Details */}
           <motion.div
             className="mt-12"
             initial={{ opacity: 0, y: 50 }}
@@ -67,71 +65,12 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <h4 className="text-2xl text-primary font-roboto mb-2">
-              👋 Hi, I’m Saifur Rahman Shihab!
+              📄 About This Project
             </h4>
             <p className="text-justify text-secondary ">
-              A motivated Junior Web Developer with hands-on experience in PHP,
-              Laravel, and modern frontend technologies. I specialize in
-              crafting responsive, user-friendly web applications and have a
-              proven track record of delivering scalable and efficient
-              full-stack solutions.
+            Hi! I’m Saifur Rahman Shihab, a Frontend Developer who loves solving problems with code and creating designs that people love to use. I’m fluent in HTML, CSS, JavaScript, and frameworks like Laravel and Bootstrap. Outside of work, I’m always learning and having fun experimenting with new ideas. Let’s do something awesome together!
             </p>
           </motion.div>
-
-          {/* What Drives Me */}
-          <motion.div
-            className="mt-12"
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.9 }}
-          >
-            <h4 className="text-2xl text-primary font-roboto mb-2">
-              ✨ What Drives Me
-            </h4>
-            <p className="text-justify text-secondary ">
-              I’m passionate about creating innovative digital experiences and
-              continuously learning new technologies to stay ahead in the
-              ever-evolving tech landscape.
-            </p>
-          </motion.div>
-
-          {/* What I Bring to the Table */}
-          <motion.div
-            className="mt-12"
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1 }}
-          >
-            <h4 className="text-2xl text-primary font-roboto mb-2">
-              🌟 What I Bring to the Table
-            </h4>
-            <ul className="text-secondary">
-              {[
-                "Expertise in HTML, CSS, JavaScript, Bootstrap, and Tailwind CSS for building pixel-perfect designs.",
-                "Backend development skills with PHP and Laravel, ensuring robust and scalable applications.",
-                "Proficiency in tools like Git and Postman for efficient development workflows.",
-              ].map((item, index) => (
-                <motion.li
-                  key={index}
-                  className=" mb-2"
-                  custom={index}
-                  variants={listItemVariants}
-                  initial="hidden"
-                  animate={isInView ? "visible" : "hidden"}
-                >
-                  {item}
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-        </motion.div>
-
-        {/* Right Section - Details - For Smaller Device */}
-        <motion.div
-        className="block md:hidden"
-        >
-          <p>Hey! I’m Saifur Rahman Shihab, a Frontend Developer with a knack for creating clean, responsive, and user-friendly websites. Whether it’s working with Laravel, styling with Tailwind, or solving tricky design challenges, I’m always up for the task. Outside of work, I love learning about new tech and experimenting with fun projects. Let’s connect and make the web a better place!</p>
-
         </motion.div>
       </motion.div>
     </section>
