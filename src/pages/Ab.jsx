@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import ProfilePic from "../assets/images/profile-pic.png";
+
 
 const About = () => {
   const ref = useRef(null);
