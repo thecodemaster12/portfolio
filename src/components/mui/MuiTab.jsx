@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import MuiCard from './MuiCard';
 
 import ReactProject from '../../assets/js/react';
+import ApiProject from '../../assets/js/api';
 import PsdProjects from '../../assets/js/psd-to-html';
 import PhpProject from '../../assets/js/php';
 import LaravelProject from '../../assets/js/laravel';
@@ -59,6 +60,7 @@ export default function BasicTabs() {
           <Tab label="React" {...a11yProps(1)} />
           <Tab label="PHP" {...a11yProps(2)} />
           <Tab label="Laravel" {...a11yProps(3)} />
+          <Tab label="API" {...a11yProps(4)} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
@@ -78,7 +80,7 @@ export default function BasicTabs() {
       <CustomTabPanel value={value} index={2}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {PhpProject.map((project) => (
-            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image}/>
+            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image} github={project.github}/>
           ))}
         </div>
       </CustomTabPanel>
@@ -86,6 +88,13 @@ export default function BasicTabs() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {LaravelProject.map((project) => (
             <MuiCard key={project.id} title={project.title} details={project.details} image={project.image}/>
+          ))}
+        </div>
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={4}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {ApiProject.map((project) => (
+            <MuiCard key={project.id} title={project.title} details={project.details} image={project.image} link={project.link} github={project.github}/>
           ))}
         </div>
       </CustomTabPanel>

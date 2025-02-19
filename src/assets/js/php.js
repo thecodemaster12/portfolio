@@ -6,7 +6,7 @@ const PhpProjects = [
         title: 'Org Post',
         details: 'A web-based platform developed using PHP, allowing admins to manage organizations, users, and posts securely and efficiently.',
         image: PhpProjectImage1,
-        link: 'https://example.com/project1'
+        github: 'https://github.com/thecodemaster12/filemanager'
     },
 
 ];
