@@ -7,7 +7,7 @@ const ApiProject = [
         details: 'Bangladesh GeoAPI is a free and open API providing geographical data of Bangladesh, including divisions, districts, and upazilas.',
         image: ApiProjectImage1,
         link: 'https://bdgeo.vercel.app/',
-        github: 'https://github.com/thecodemaster12/bd-geo-api'
+        github: 'https://github.com/thecodemaster12/bdgeo'
     },
 
 ];
